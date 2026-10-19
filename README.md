@@ -13,6 +13,8 @@ Every example comes in two versions:
 
 > **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)** is a managed, serverless MQTT broker for IoT devices, apps and digital twins. Start on the **Serverless (Free)** plan — no credit card. 👉 **[Create your free broker](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)**
 
+<p align="center"><a href="https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-hero"><img src="assets/connectmq-website.png" alt="ConnectMQ — managed MQTT broker: connect sensors, PLC gateways, vehicles and smart homes to dashboards, backends, mobile apps and data platforms" width="900"></a></p>
+
 ## Examples
 
 | Language / platform | Library | Step-by-step guide |
@@ -45,6 +47,8 @@ No sign-up, no setup — point any MQTT client at it:
 
 Supports MQTT 3.1.1 and MQTT 5.
 
+<p align="center"><a href="https://connectmq.com/public-mqtt-broker/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-public-shot"><img src="assets/public-broker.png" alt="Free public MQTT broker broker.connectmq.com — MQTT 3.1.1 and 5 over TCP, TLS, WebSocket and secure WebSocket" width="720"></a></p>
+
 ```bash
 # Terminal 1: subscribe
 mosquitto_sub -h broker.connectmq.com -p 1883 -t "your-project/sensors/#" -v
@@ -70,6 +74,19 @@ What you get:
 - 🛡️ **Topic access control (ACL)** — per topic, per client, with `${clientid}` / `${username}` placeholders
 - 📊 **Device dashboard** — live status, last values and connection history of every device
 - ⚡ **Serverless & fully managed** — scale from one sensor to a fleet without running servers
+
+### A look inside ConnectMQ
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="https://connectmq.com/monitoring/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-gallery"><img src="assets/dashboard.png" alt="ConnectMQ dashboard: broker status, ISA-95 topic tree and live value cards with sparklines for every topic" width="100%"></a><br><b>Live dashboard</b> — broker status, ISA-95 topic tree and a live card for every topic</td>
+    <td width="50%" valign="top"><a href="https://connectmq.com/digital-twin/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-gallery"><img src="assets/digital-twin.png" alt="ConnectMQ 3D Digital Twin: machines bound to their MQTT topics with live telemetry" width="100%"></a><br><b>3D Digital Twin</b> — machines bound to their MQTT topics, telemetry on the equipment</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://connectmq.com/rules-alerts/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-gallery"><img src="assets/rules.png" alt="ConnectMQ alert rules: conditions on JSON payload fields with message templates" width="100%"></a><br><b>Rules</b> — thresholds on JSON payload fields, such as <code>{temp} &gt; 70</code></td>
+    <td width="50%" valign="top"><a href="https://connectmq.com/rules-alerts/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-gallery"><img src="assets/alerts.png" alt="ConnectMQ triggered alerts: audit log with the exact payload that caused each alert" width="100%"></a><br><b>Alerts</b> — audit log with the exact payload, plus browser notifications</td>
+  </tr>
+</table>
 
 | | Free public broker | Private broker on ConnectMQ |
 | --- | --- | --- |

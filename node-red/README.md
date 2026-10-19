@@ -10,6 +10,8 @@ Connect Node-RED to an MQTT broker with an importable flow. Start on the free pu
 
 Full walkthrough on the website: **[Node-RED MQTT example](https://connectmq.com/code-samples/node-red/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-intro)**
 
+<p align="center"><a href="https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-hero"><img src="../assets/connectmq-website.png" alt="ConnectMQ — managed MQTT broker: connect sensors, PLC gateways, vehicles and smart homes to dashboards, backends, mobile apps and data platforms" width="820"></a></p>
+
 ## Requirements
 
 - **Library:** [mqtt in / mqtt out nodes](https://nodered.org/docs/user-guide/messages)
@@ -104,6 +106,17 @@ For real devices, use a private serverless MQTT broker on ConnectMQ instead of t
 - 🛡️ **Per-topic access control (ACL)** — decide which client may publish or subscribe to which topic
 - 📊 **Devices & connections dashboard** — live device status, last values, connection history
 - ⚡ **Fully managed and serverless** — no servers to patch or scale
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="https://connectmq.com/monitoring/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-gallery"><img src="../assets/dashboard.png" alt="ConnectMQ dashboard: broker status, ISA-95 topic tree and live value cards with sparklines for every topic" width="100%"></a><br><b>Live dashboard</b> — broker status, ISA-95 topic tree and a live card for every topic</td>
+    <td width="50%" valign="top"><a href="https://connectmq.com/digital-twin/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-gallery"><img src="../assets/digital-twin.png" alt="ConnectMQ 3D Digital Twin: machines bound to their MQTT topics with live telemetry" width="100%"></a><br><b>3D Digital Twin</b> — machines bound to their MQTT topics, telemetry on the equipment</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://connectmq.com/rules-alerts/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-gallery"><img src="../assets/rules.png" alt="ConnectMQ alert rules: conditions on JSON payload fields with message templates" width="100%"></a><br><b>Rules</b> — thresholds on JSON payload fields, such as <code>{temp} &gt; 70</code></td>
+    <td width="50%" valign="top"><a href="https://connectmq.com/rules-alerts/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=node-red-gallery"><img src="../assets/alerts.png" alt="ConnectMQ triggered alerts: audit log with the exact payload that caused each alert" width="100%"></a><br><b>Alerts</b> — audit log with the exact payload, plus browser notifications</td>
+  </tr>
+</table>
 
 ## Public vs. private broker
 
