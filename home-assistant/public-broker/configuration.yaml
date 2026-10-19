@@ -1,0 +1,9 @@
+# Broker: Settings > Devices & services > MQTT, host broker.connectmq.com, port 1883
+mqtt:
+  sensor:
+    - name: "Living room temperature"
+      # Messages on this topic become a temperature sensor
+      state_topic: "your-project/sensors/temperature"
+      value_template: "{{ value_json.temperature }}"
+      unit_of_measurement: "°C"
+      device_class: temperature

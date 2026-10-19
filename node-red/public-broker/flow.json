@@ -1,0 +1,16 @@
+[
+  { "id": "cmq_broker", "type": "mqtt-broker", "name": "ConnectMQ broker",
+    "broker": "broker.connectmq.com", "port": "1883", "usetls": false,
+    "protocolVersion": "4", "keepalive": "60", "cleansession": true },
+  { "id": "cmq_inject", "type": "inject", "name": "Send a reading every 10 s", "x": 160, "y": 80,
+    "props": [{ "p": "payload" }], "payload": "{\"temperature\":21.5}", "payloadType": "json",
+    "repeat": "10", "once": true, "wires": [["cmq_out"]] },
+  { "id": "cmq_out", "type": "mqtt out", "name": "Publish a JSON reading", "x": 420, "y": 80,
+    "topic": "your-project/sensors/temperature", "qos": "1", "retain": "false",
+    "broker": "cmq_broker", "wires": [] },
+  { "id": "cmq_in", "type": "mqtt in", "name": "Subscribe to the temperature topic", "x": 160, "y": 160,
+    "topic": "your-project/sensors/#", "qos": "1", "datatype": "auto-detect",
+    "broker": "cmq_broker", "wires": [["cmq_debug"]] },
+  { "id": "cmq_debug", "type": "debug", "name": "Runs for every message on a subscribed topic", "x": 420, "y": 160,
+    "active": true, "complete": "payload", "wires": [] }
+]

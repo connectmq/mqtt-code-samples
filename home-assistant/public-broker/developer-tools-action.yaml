@@ -1,0 +1,5 @@
+# Publish a JSON reading
+action: mqtt.publish
+data:
+  topic: "your-project/sensors/temperature"
+  payload: '{"temperature":21.5}'
