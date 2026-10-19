@@ -1,0 +1,6 @@
+mqtt:
+  url: ${MQTT_URL:ssl://broker.connectmq.com:8883}
+  client-id: ${MQTT_CLIENT_ID:spring-s8d2lf}
+  username: ${MQTT_USERNAME:}
+  password: ${MQTT_PASSWORD:}
+  prefix: ${MQTT_PREFIX:connectmq/demo/s8d2lf}

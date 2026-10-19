@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DeviceControl"
+             x:Class="DeviceControl.MainPage"
+             x:DataType="local:MainViewModel"
+             Title="Device Control">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="{Binding ConnectionText}" FontSize="14" />
+        <Label Text="Temperature" FontSize="16" />
+        <Label Text="{Binding TemperatureText}" FontSize="48" FontAttributes="Bold" />
+        <Label Text="{Binding DeviceStatus, StringFormat='Device: {0}'}" />
+        <HorizontalStackLayout Spacing="12">
+            <Label Text="Relay" VerticalOptions="Center" />
+            <Switch IsToggled="{Binding RelayOn}" />
+        </HorizontalStackLayout>
+        <Button Text="Reconnect" Command="{Binding ConnectCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

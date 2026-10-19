@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative "../config/environment"
+require Rails.root.join("lib/mqtt_worker")
+
+worker = MqttWorker.new(
+  filter: "#{ENV.fetch('MQTT_TOPIC_PREFIX')}/devices/+/telemetry",
+  handler: lambda do |topic, data|
+    device_id = topic.split("/")[-2]
+    Reading.create!(device_id: device_id, payload: data, received_at: Time.current)
+  end
+)
+%w[INT TERM].each { |sig| trap(sig) { Thread.new { worker.stop } } }
+worker.run

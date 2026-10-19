@@ -1,0 +1,6 @@
+from(bucket: "sensors")
+  |> range(start: -1h)
+  |> filter(fn: (r) => r._measurement == "sensor" and r._field == "temperature")
+  |> group(columns: ["device", "line"])
+  |> last()
+  |> map(fn: (r) => ({ r with _value: float(v: uint(v: now()) - uint(v: r._time)) / 1000000000.0 }))

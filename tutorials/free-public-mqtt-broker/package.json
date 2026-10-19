@@ -1,0 +1,8 @@
+{
+  "name": "free-public-mqtt-broker",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mqtt": "^5.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "mqtt-to-mongodb",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mongodb": "^6.0.0",
+    "mqtt": "^5.0.0"
+  }
+}

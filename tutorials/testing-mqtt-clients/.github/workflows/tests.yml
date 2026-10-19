@@ -1,0 +1,17 @@
+name: tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Start MQTT broker
+        run: |
+          docker run -d --name test-broker -p 1883:1883 eclipse-mosquitto:2 \
+            mosquitto -c /mosquitto-no-auth.conf
+      - run: pip install "paho-mqtt>=2,<3" pytest
+      - run: pytest -q

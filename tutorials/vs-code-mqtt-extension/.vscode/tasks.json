@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "payloadFile",
+      "type": "pickString",
+      "description": "Payload to publish",
+      "options": [
+        "mqtt/payloads/cmd-blink.json",
+        "mqtt/payloads/telemetry-normal.json",
+        "mqtt/payloads/telemetry-out-of-range.json"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "label": "MQTT: watch demo topics",
+      "type": "shell",
+      "command": "mosquitto_sub -h broker.connectmq.com -p 1883 -i vscode-watch-7hq2 -t 'connectmq/demo/7hq2/#' -v",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "MQTT: publish payload file",
+      "type": "shell",
+      "command": "mosquitto_pub -h broker.connectmq.com -p 1883 -i vscode-pub-7hq2 -t connectmq/demo/7hq2/device1/telemetry -q 1 -f ${input:payloadFile}",
+      "problemMatcher": []
+    },
+    {
+      "label": "MQTT: wait for one telemetry message",
+      "type": "shell",
+      "command": "mosquitto_sub -h broker.connectmq.com -p 1883 -i vscode-check-7hq2 -t connectmq/demo/7hq2/device1/telemetry -C 1 -W 15",
+      "problemMatcher": []
+    }
+  ]
+}

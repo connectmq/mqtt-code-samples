@@ -1,0 +1,8 @@
+{
+  "name": "mqtt-node-demo",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mqtt": "^5.0.0"
+  }
+}

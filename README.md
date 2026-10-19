@@ -34,6 +34,12 @@ Every example comes in two versions:
 
 Each folder has its own README with install steps, both code versions and how to run them.
 
+## Tutorials: complete projects
+
+Beyond the basic examples, **[`tutorials/`](tutorials/)** holds the code of **58 step-by-step tutorials** from the [ConnectMQ blog](https://connectmq.com/blog/category/iot-tutorials/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-tutorials): MQTT to databases (SQLite, MongoDB, InfluxDB, TimescaleDB), dashboards (Grafana, Streamlit, React, Vue, Angular), mobile and desktop apps, bots, device simulators, TLS, reconnect strategies and more — each ready to run on the free public broker and on your private ConnectMQ broker.
+
+👉 **[Browse all tutorials](tutorials/)**
+
 ## Quick start: the free public broker
 
 No sign-up, no setup — point any MQTT client at it:

@@ -1,0 +1,8 @@
+# grafana/provisioning/dashboards/dashboards.yml
+apiVersion: 1
+providers:
+  - name: mqtt
+    folder: MQTT
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

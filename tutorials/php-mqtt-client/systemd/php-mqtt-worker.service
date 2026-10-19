@@ -1,0 +1,16 @@
+[Unit]
+Description=PHP MQTT subscriber
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www/app
+ExecStart=/usr/bin/php bin/subscriber.php
+EnvironmentFile=/etc/php-mqtt-worker.env
+Restart=always
+RestartSec=5
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

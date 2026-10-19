@@ -1,0 +1,14 @@
+[Unit]
+Description=MQTT Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+EnvironmentFile=/etc/telegram-mqtt-bot.env
+ExecStart=/usr/bin/python3 /opt/telegram-bot/telegram_bot.py
+Restart=always
+RestartSec=5
+User=pi
+
+[Install]
+WantedBy=multi-user.target

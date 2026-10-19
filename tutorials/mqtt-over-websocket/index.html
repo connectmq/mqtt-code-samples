@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MQTT over WebSocket demo</title>
+  <script src="https://unpkg.com/mqtt@5.10.3/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <p>Status: <span id="status">connecting...</span></p>
+  <input id="msg" value="Hello from the browser">
+  <button id="send">Publish</button>
+  <pre id="log"></pre>
+
+  <script>
+    const id = Math.random().toString(16).slice(2, 10);
+    const clientId = "web-" + id;
+    const topic = "connectmq/demo/" + id + "/chat";
+    const log = (line) => {
+      document.getElementById("log").textContent += line + "\n";
+    };
+
+    const client = mqtt.connect("wss://broker.connectmq.com:8084/mqtt", {
+      clientId: clientId,
+      protocolVersion: 5,
+      clean: true,
+      keepalive: 30,
+      reconnectPeriod: 2000,
+      connectTimeout: 10000
+    });
+
+    client.on("connect", () => {
+      document.getElementById("status").textContent = "connected as " + clientId;
+      client.subscribe(topic, { qos: 1 }, (err, granted) => {
+        if (err) return log("Subscribe error: " + err.message);
+        log("Subscribed to " + granted[0].topic + " (QoS " + granted[0].qos + ")");
+      });
+    });
+
+    client.on("message", (t, payload) => {
+      log("[" + t + "] " + payload.toString());
+    });
+
+    client.on("reconnect", () => {
+      document.getElementById("status").textContent = "reconnecting...";
+    });
+
+    client.on("error", (err) => log("Error: " + err.message));
+
+    document.getElementById("send").onclick = () => {
+      const text = document.getElementById("msg").value;
+      client.publish(topic, text, { qos: 1 });
+    };
+  </script>
+</body>
+</html>

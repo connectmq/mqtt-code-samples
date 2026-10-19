@@ -1,0 +1,16 @@
+[Unit]
+Description=Paho MQTT C publisher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/publisher
+Environment=MQTT_CLIENT_ID=YOUR_CLIENT_ID
+Environment=MQTT_USERNAME=YOUR_USERNAME
+Environment=MQTT_PASSWORD=YOUR_PASSWORD
+Environment=MQTT_TOPIC_PREFIX=acme/plant1/gateway1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

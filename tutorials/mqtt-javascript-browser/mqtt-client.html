@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimal MQTT Browser Client</title>
+  <script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    input, button { font: inherit; padding: .4rem .6rem; }
+    #log { border: 1px solid #ccc; height: 280px; overflow-y: auto; padding: .5rem; font-family: monospace; font-size: .85rem; }
+    .row { display: flex; gap: .5rem; margin: .5rem 0; }
+    .row input { flex: 1; }
+  </style>
+</head>
+<body>
+  <h1>MQTT in the Browser</h1>
+  <p>Status: <strong id="status">disconnected</strong></p>
+
+  <div class="row">
+    <input id="url" value="wss://broker.connectmq.com:8084/mqtt">
+    <button id="connectBtn">Connect</button>
+    <button id="disconnectBtn">Disconnect</button>
+  </div>
+
+  <div class="row">
+    <input id="subTopic">
+    <button id="subBtn">Subscribe</button>
+  </div>
+
+  <div class="row">
+    <input id="pubTopic">
+    <input id="pubPayload" value='{"temperature": 21.5}'>
+    <button id="pubBtn">Publish</button>
+  </div>
+
+  <div id="log"></div>
+
+  <script>
+    const randomId = Math.random().toString(16).slice(2, 10);
+    const prefix = `connectmq/demo/${randomId}`;
+    document.getElementById("subTopic").value = `${prefix}/#`;
+    document.getElementById("pubTopic").value = `${prefix}/sensors/room1`;
+
+    const statusEl = document.getElementById("status");
+    const logEl = document.getElementById("log");
+    let client = null;
+
+    function log(text) {
+      const line = document.createElement("div");
+      line.textContent = `[${new Date().toLocaleTimeString()}] ${text}`;
+      logEl.appendChild(line);
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    document.getElementById("connectBtn").onclick = () => {
+      if (client) return;
+      const url = document.getElementById("url").value;
+      client = mqtt.connect(url, {
+        clientId: `browser-${randomId}`,
+        protocolVersion: 5,
+        clean: true,
+        keepalive: 30,
+        connectTimeout: 10000,
+        reconnectPeriod: 3000
+        // For a private ConnectMQ broker add:
+        // username: "YOUR_USERNAME",
+        // password: "YOUR_PASSWORD"
+      });
+
+      client.on("connect", () => { statusEl.textContent = "connected"; log(`Connected to ${url}`); });
+      client.on("reconnect", () => { statusEl.textContent = "reconnecting"; });
+      client.on("close", () => { statusEl.textContent = "disconnected"; });
+      client.on("offline", () => log("Client went offline"));
+      client.on("error", (err) => log(`Error: ${err.message}`));
+      client.on("message", (topic, payload, packet) => {
+        const retained = packet.retain ? " (retained)" : "";
+        log(`${topic}${retained}: ${payload.toString()}`);
+      });
+    };
+
+    document.getElementById("disconnectBtn").onclick = () => {
+      if (!client) return;
+      client.end(false, () => log("Disconnected cleanly"));
+      client = null;
+    };
+
+    document.getElementById("subBtn").onclick = () => {
+      if (!client) return log("Connect first");
+      const topic = document.getElementById("subTopic").value;
+      client.subscribe(topic, { qos: 1 }, (err, granted) => {
+        if (err) return log(`Subscribe failed: ${err.message}`);
+        granted.forEach(g => log(`Subscribed to ${g.topic} (granted QoS ${g.qos})`));
+      });
+    };
+
+    document.getElementById("pubBtn").onclick = () => {
+      if (!client) return log("Connect first");
+      const topic = document.getElementById("pubTopic").value;
+      const payload = document.getElementById("pubPayload").value;
+      client.publish(topic, payload, { qos: 1 }, (err) => {
+        if (err) log(`Publish failed: ${err.message}`);
+      });
+    };
+  </script>
+</body>
+</html>

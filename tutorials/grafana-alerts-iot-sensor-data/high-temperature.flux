@@ -1,0 +1,5 @@
+from(bucket: "sensors")
+  |> range(start: -10m)
+  |> filter(fn: (r) => r._measurement == "sensor" and r._field == "temperature")
+  |> group(columns: ["device", "line"])
+  |> aggregateWindow(every: 1m, fn: mean, createEmpty: false)

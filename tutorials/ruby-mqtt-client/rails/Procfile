@@ -1,0 +1,2 @@
+web: bundle exec puma -C config/puma.rb
+mqtt: bundle exec ruby bin/mqtt_worker
