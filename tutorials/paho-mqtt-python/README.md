@@ -68,7 +68,7 @@ Public broker limits: 10 messages per second per client and 64 KB per message.
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-paho-mqtt-python-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-paho-mqtt-python-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `subscriber.py` and `publisher.py`, replace the client construction and `connect()` call with the post's private-broker version, using the host name shown for your broker in the portal:
 

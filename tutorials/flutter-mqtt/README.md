@@ -61,7 +61,7 @@ On Android release builds add `<uses-permission android:name="android.permission
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-flutter-mqtt-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-flutter-mqtt-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `lib/main.dart`, construct the service with your credentials (TLS on 8883 for native, WSS on 8084 for web are already used by the client factories; pass `host:` too if your broker host is not `broker.connectmq.com`):
 

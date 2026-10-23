@@ -62,7 +62,7 @@ Build a live Streamlit dashboard fed by a background paho-mqtt subscriber connec
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-streamlit-mqtt-dashboard-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-streamlit-mqtt-dashboard-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `dashboard.py`, set `BROKER` to your broker host and `PORT = 8883`, then uncomment the private-broker lines that are already in `start_mqtt()`:
 

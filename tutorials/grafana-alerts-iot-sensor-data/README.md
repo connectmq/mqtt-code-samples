@@ -69,7 +69,7 @@ Build Grafana alert rules on MQTT sensor data in InfluxDB, with one alert instan
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-grafana-alerts-iot-sensor-data-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-grafana-alerts-iot-sensor-data-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. The alert rules and Flux queries stay the same; only the ingestion side changes. In Telegraf's `[[inputs.mqtt_consumer]]` section, point `servers` at `ssl://YOUR_BROKER_HOST:8883` and set `username = "YOUR_USERNAME"`, `password = "YOUR_PASSWORD"` and `client_id = "YOUR_CLIENT_ID"`. For the test loop, add `-p 8883 -u YOUR_USERNAME -P YOUR_PASSWORD -i YOUR_CLIENT_ID_test` plus `--capath /etc/ssl/certs` to `mosquitto_pub`. The portal's threshold alert rules can cover simple thresholds while devices are commissioned.
 

@@ -73,7 +73,7 @@ Topics used by the HMI (`<prefix>` defaults to `connectmq/demo/qt-hmi-3f81`):
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-qt-mqtt-client-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-qt-mqtt-client-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. `main.cpp` already connects with TLS on port 8883 and reads credentials from the environment. Change `m_client.setHostname("broker.connectmq.com")` in `setupClient()` to your broker host, then set the panel's environment (for example in its systemd unit):
 

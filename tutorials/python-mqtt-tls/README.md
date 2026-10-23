@@ -79,7 +79,7 @@ Getting `CERTIFICATE_VERIFY_FAILED` on macOS with Python from python.org? Run "I
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-python-mqtt-tls-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-python-mqtt-tls-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. `tls_client.py` already uses TLS on port 8883. Set `BROKER` to your broker host, use the client ID shown in the portal, and add credentials before `client.connect(...)` — as in the post:
 

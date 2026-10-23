@@ -60,7 +60,7 @@ Learn to publish MQTT messages from a PHP web request and run a long-lived PHP s
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-php-mqtt-client-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-php-mqtt-client-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. The code already uses TLS on port 8883. Set `MQTT_HOST` in `mqtt.php` to your broker host, and provide the credentials as environment variables — `mqtt.php` switches to them automatically when `MQTT_USERNAME` is set. For the systemd worker, put them in `/etc/php-mqtt-worker.env` (mode 600):
 

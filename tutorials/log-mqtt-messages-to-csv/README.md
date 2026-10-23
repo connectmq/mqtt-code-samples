@@ -63,7 +63,7 @@ Other settings (environment variables): `CSV_DIR` (default `mqtt_logs`), `CSV_MA
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-log-mqtt-messages-to-csv-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-log-mqtt-messages-to-csv-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Run the same script with environment variables; TLS is enabled automatically when `MQTT_PORT` is `8883`. Use the client ID from the portal rather than a random one:
 

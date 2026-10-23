@@ -100,7 +100,7 @@ The defaults in `application.yml` already point at `ssl://broker.connectmq.com:8
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-spring-boot-mqtt-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-spring-boot-mqtt-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. No code change is needed: `application.yml` reads everything from the environment, and `MqttConfig` sets the username and password when `MQTT_USERNAME` is not blank. Set the generated values (the client ID must match exactly):
 

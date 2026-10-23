@@ -85,12 +85,12 @@ Future<void> main() async {
 
 ## 2. Go to production with a private ConnectMQ broker
 
-For real devices, use a private serverless MQTT broker on ConnectMQ instead of the public one: TLS encryption, a username and password for every device and per-topic access control, fully managed. The Serverless (Free) plan needs no credit card.
+For real devices, use a private serverless MQTT broker on ConnectMQ instead of the public one: TLS encryption, a username and password for every device and per-topic access control, fully managed. The Free plan needs no credit card.
 
 **Get your private broker in under a minute:**
 
 1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=dart-flutter-private) — no credit card.
-2. Create a broker in the dashboard (the **Serverless (Free)** plan is enough to start).
+2. Create a broker in the dashboard (the **Free** plan is enough to start).
 3. Copy the **host**, **username** and **password** of your broker.
 4. Replace `YOUR_BROKER_HOST`, `YOUR_USERNAME` and `YOUR_PASSWORD` in the files under [`private-broker/`](private-broker/) and run them.
 

@@ -73,7 +73,7 @@ For a Rails app, copy `tls_client.rb` and `mqtt_worker.rb` into `lib/` and the f
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-ruby-mqtt-client-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-ruby-mqtt-client-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. `tls_client.rb` already uses TLS on 8883 with `VERIFY_PEER` and reads everything from the environment, so `tls_client.rb`, `mqtt_worker.rb` and the Rails files need no code change. Set (in Rails credentials or your platform's secret store):
 

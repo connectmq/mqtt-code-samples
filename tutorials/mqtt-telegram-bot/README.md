@@ -80,7 +80,7 @@ Never control real equipment through the public broker — anyone can publish to
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-telegram-bot-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-telegram-bot-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. No code changes are needed: `telegram_bot.py` reads the broker settings from the environment and enables TLS when the port is 8883. Set `MQTT_HOST`, `MQTT_PORT=8883`, `MQTT_USERNAME`, `MQTT_PASSWORD` and `MQTT_CLIENT_ID` (in your shell or in `/etc/telegram-mqtt-bot.env`):
 

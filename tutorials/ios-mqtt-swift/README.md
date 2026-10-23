@@ -73,7 +73,7 @@ mqtt.willMessage = CocoaMQTTMessage(topic: "\(self.topicPrefix)/apps/\(id)/statu
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-ios-mqtt-swift-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-ios-mqtt-swift-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Initialise the model in `ContentView.swift` with your broker's host and credentials instead of `MQTTModel()`, and keep `enableSSL = true` on port 8883:
 

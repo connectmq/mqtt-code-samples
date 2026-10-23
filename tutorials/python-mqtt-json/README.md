@@ -78,7 +78,7 @@ Change `k7f3q2` in `PREFIX` to your own random string so you stay separate from 
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-python-mqtt-json-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-python-mqtt-json-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `json_publisher.py`, set `BROKER` to your broker host and `PORT = 8883`, then add the lines from the post's comment before `client.connect(...)`:
 

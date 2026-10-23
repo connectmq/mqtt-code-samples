@@ -63,7 +63,7 @@ Other settings: `MAIL_FROM` (defaults to `SMTP_USER`), `COOLDOWN_MINUTES` (defau
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-email-alerts-python-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-email-alerts-python-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Set the MQTT environment variables read by `mqtt_email_alerts.py` (TLS is enabled automatically when `MQTT_PORT` is `8883`), then start it as before:
 

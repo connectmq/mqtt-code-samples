@@ -9,7 +9,7 @@ The complete code of **58 step-by-step tutorials** from the [ConnectMQ blog](htt
 
 Every tutorial runs on the **free public broker `broker.connectmq.com`** with no account, and its README shows exactly what to change to run it on your **private ConnectMQ broker** — TLS, a username and password per device and per-topic access control.
 
-> **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tutorials-intro)** is a managed, serverless MQTT broker for IoT. Start on the **Serverless (Free)** plan — no credit card. 👉 **[Create your free broker](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tutorials-intro)**
+> **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tutorials-intro)** is a managed, serverless MQTT broker for IoT. Start on the **Free** plan — no credit card. 👉 **[Create your free broker](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tutorials-intro)**
 
 <p align="center"><a href="https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tutorials-hero"><img src="../assets/connectmq-website.png" alt="ConnectMQ — managed MQTT broker: connect sensors, PLC gateways, vehicles and smart homes to dashboards, backends, mobile apps and data platforms" width="820"></a></p>
 

@@ -11,7 +11,7 @@ Every example comes in two versions:
 1. **`public-broker/`** — runs right away on the free public broker `broker.connectmq.com`, no account needed.
 2. **`private-broker/`** — the same code on a secure private broker on **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)**: TLS, a username and password per device and per-topic access control.
 
-> **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)** is a managed, serverless MQTT broker for IoT devices, apps and digital twins. Start on the **Serverless (Free)** plan — no credit card. 👉 **[Create your free broker](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)**
+> **[ConnectMQ](https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)** is a managed, serverless MQTT broker for IoT devices, apps and digital twins. Start on the **Free** plan — no credit card. 👉 **[Create your free broker](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-intro)**
 
 <p align="center"><a href="https://connectmq.com/?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=root-hero"><img src="assets/connectmq-website.png" alt="ConnectMQ — managed MQTT broker: connect sensors, PLC gateways, vehicles and smart homes to dashboards, backends, mobile apps and data platforms" width="900"></a></p>
 

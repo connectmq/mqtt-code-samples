@@ -69,7 +69,7 @@ Connection details: TCP `1883`, TLS `8883`, WebSocket `8083` (`/mqtt`), Secure W
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-free-public-mqtt-broker-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-free-public-mqtt-broker-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Keep the same code and add the username, password and client ID from the portal. In `public_broker.py`, the post's version:
 

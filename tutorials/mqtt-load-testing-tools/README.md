@@ -62,7 +62,7 @@ A practical comparison of emqtt-bench, MQTTX Bench and Locust for MQTT load test
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-load-testing-tools-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-load-testing-tools-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Create a dedicated broker for load testing so production devices are not affected, then set the environment variables that `locustfile.py` and `probe.py` read (both already use TLS on port 8883 with `tls_set()`):
 

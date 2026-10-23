@@ -45,7 +45,7 @@ A cell-by-cell guide to exploring MQTT data in Jupyter: connect paho-mqtt in the
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-jupyter-notebook-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-jupyter-notebook-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Only the connection lines in Cell 2 change: call `sub.username_pw_set("YOUR_USERNAME", "YOUR_PASSWORD")`, call `sub.tls_set()`, use `client_id="YOUR_CLIENT_ID"` and connect to port 8883 (set `BROKER` to your broker host and `PORT = 8883` in Cell 1). The broker's Let's Encrypt certificate is trusted by the default system store.
 

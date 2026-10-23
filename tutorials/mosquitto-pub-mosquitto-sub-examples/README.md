@@ -60,7 +60,7 @@ A copy-paste reference of 25 mosquitto_pub and mosquitto_sub commands covering Q
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mosquitto-pub-mosquitto-sub-examples-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mosquitto-pub-mosquitto-sub-examples-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Every command works on your private broker by swapping the `-h ... -p 1883` flags for the TLS and credential flags of example 23:
 

@@ -98,7 +98,7 @@ For batched gateway payloads with a `readings` array, add a second `mqtt_consume
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-telegraf-json-v2-parser-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-telegraf-json-v2-parser-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `json_v2.conf`, switch the `[[inputs.mqtt_consumer]]` to TLS and add the credentials and client ID issued in the portal. For production, also replace the `[[outputs.file]]` block with an `[[outputs.influxdb_v2]]` output:
 

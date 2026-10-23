@@ -50,7 +50,7 @@ The post's layout also lists `cmd-blink.json`, `cmd-reboot.json` and `telemetry-
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-vs-code-mqtt-extension-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-vs-code-mqtt-extension-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In the extension, set host to your broker host, port **8883 (TLS)**, client ID `YOUR_CLIENT_ID` and username/password `YOUR_USERNAME` / `YOUR_PASSWORD` (client IDs are bound to the issued credentials). In `.vscode/tasks.json`, change `-h`, use `-p 8883`, use the issued client ID with `-i`, and add credentials from environment variables instead of committing them:
 

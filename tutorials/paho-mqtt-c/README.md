@@ -90,7 +90,7 @@ If TLS connect fails or hangs, test the port with `openssl s_client -connect bro
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-paho-mqtt-c-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-paho-mqtt-c-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. In `publisher.c` (and `subscriber.c`), change `ADDRESS` to `"ssl://YOUR_BROKER_HOST:8883"`. Credentials and client ID come from environment variables, so fill them into `mqtt-publisher.service` and install it:
 

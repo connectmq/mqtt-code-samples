@@ -67,7 +67,7 @@ The browser URL can be overridden with `NEXT_PUBLIC_MQTT_URL` (default `wss://br
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-next-js-mqtt-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-next-js-mqtt-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. The server code (`lib/mqtt-server.js`, `app/api/notice/route.js`) reads its connection from environment variables. Put them in `.env.local`:
 

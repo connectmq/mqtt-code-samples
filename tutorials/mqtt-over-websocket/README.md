@@ -56,7 +56,7 @@ Browsers cannot open raw TCP sockets, so web apps speak MQTT over WebSocket. Bui
 
 For real devices, switch to a private broker: TLS, a username and password per device and per-topic access control.
 
-1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-over-websocket-private) — the **Serverless (Free)** plan needs no credit card.
+1. [Create a free ConnectMQ account](https://app.connectmq.com/signup?utm_source=github&utm_medium=code-samples&utm_campaign=mqtt-code-samples&utm_content=tut-mqtt-over-websocket-private) — the **Free** plan needs no credit card.
 2. Create a broker in the dashboard and copy its **host**, **username** and **password**.
 3. Replace the `mqtt.connect(...)` call in `index.html` (or `ws-client.mjs`) with your broker's secure WebSocket URL and the generated credentials:
 
